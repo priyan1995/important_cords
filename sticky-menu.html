@@ -1,0 +1,62 @@
+
+     <nav class="navbar navbar-expand-lg navbar-dark " id="pd_fixed_nav">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="main-menu-wrap collapse navbar-collapse" id="navbarSupportedContent">
+         <!-- your navigation here -->
+        </div>
+
+      </nav>
+
+
+<style>
+/* sticky menu */
+
+.sticky {
+    position: fixed;
+    top: -18px;
+    width: 100%;
+    background: #232323;
+    z-index: 9999999999999;
+    transition: 0.5s;
+    padding: 10px 0;
+}
+
+.sticky+.content {
+    padding-top: 50px;
+}
+
+.sticky .logo-wrap img {
+    width: 25px;
+    transition: 0.5s;
+    padding-top: 15px;
+}
+
+.sticky #pd_fixed_nav {
+    padding: 17px 0 0;
+    transition: 0.5s;
+}
+</style>
+
+
+<script>
+    window.onscroll = function() {
+      myFunction()
+    };
+
+    var navbar = document.getElementById("navbar");
+    var stickeyAdded = navbar.offsetTop + 150;
+    var sticky = stickeyAdded;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
